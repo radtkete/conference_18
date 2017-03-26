@@ -1,0 +1,248 @@
+ul,
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+dl {
+  margin: 0;
+}
+
+dt {
+  font-weight: 600;
+  margin: 0;
+}
+
+dd {
+  margin: 0;
+}
+
+.list-inline {
+  padding-left: 0;
+  margin-left: -5px;
+
+  > li {
+    display: inline-block;
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+}
+
+.tabs-holder {
+  @include outer-container(1000px);
+  border: 1px solid #ccc;
+  margin-top: 50px;
+}
+
+.tabgroup > div {
+  padding: 30px 60px 30px 30px;
+  display: none;
+  &.active {
+    display: block;
+  }
+
+hr {
+    border-bottom: 1px dashed #ddd;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    margin: 0 auto 1.5em;
+    width: 75%;
+    text-align: center;
+}
+
+
+  @include media($medium-down) {
+    padding: 30px 20px;
+  }
+}
+
+
+
+
+.schedules-tab-nav {
+  text-align: center;
+  margin: -45px 0 0;
+  @include media($xsmall-only) {
+    margin: -35px 0 0;
+  }
+
+  ul {
+    @include clearfix;
+    display: inline-block;
+    border: 1px solid #ccc;
+
+    li {
+      float: left;
+      border-right: 1px solid #ccc;
+
+      a.tab-button {
+        position: relative;
+        padding: 15px 30px;
+        font-size: 24px;
+        font-weight: $font-weight--bold;
+        outline: none;
+        color: $color-purple_light;
+        background: $base-background-color;
+        display: block;
+
+        &.active {
+          background: $color-purple_light;
+          color: #fff;
+
+          &:after {
+            @include triangle(24px, $color-purple_light, down);
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 100%;
+            margin-left: -12px;
+          }
+
+          span {
+            color: #fff;
+          }
+        }
+
+        @include media($medium-down) {
+          font-size: 18px;
+          padding: 15px;
+        }
+
+        @include media($xsmall-only) {
+          padding: 10px 5px;
+        }
+
+
+        span {
+          display: block;
+          font-size: 16px;
+          font-weight: $font-weight--regular;
+          color: $color-black;
+          text-transform: uppercase;
+
+          @include media($medium-down) {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.comment {
+  $comment-gutter: 1.4em;
+  $comment-image-padding: 0.7em;
+  $comment-image-width: 6em;
+  $comment-color: $base-font-color;
+  $comment-detail-color: transparentize($comment-color, 0.5);
+  $comment-image-vert-alignment: top;
+
+  // border-bottom: 1px solid transparentize($comment-color, 0.9);
+  display: table;
+  margin-bottom: $base-spacing;
+  // padding-bottom: $base-spacing;
+  width: 100%;
+
+  .comment-image,
+  .comment-content {
+    display: table-cell;
+    vertical-align: $comment-image-vert-alignment;
+  }
+
+  .comment-image {
+    padding-right: $comment-gutter;
+
+    > img {
+      display: block;
+      height: auto;
+      max-width: none;
+      width: $comment-image-width;
+      border-radius: 100%;
+    }
+
+    .comment-reverse-order & {
+      padding-left: 10px;
+      padding-right: 0;
+    }
+  }
+
+  .comment-content {
+    width: 100%;
+    padding-left: $comment-gutter;
+    border-left: 1px solid transparentize($comment-color, 0.9);
+
+    .time-location {
+      overflow: hidden;
+      margin: 0 0 10px;
+      li {
+        margin: 0 30px 0 0;
+        font-weight: 700;
+        @include media($medium-down) {
+          font-size: 11px;
+          margin: 0 20px 0 0;
+        }
+        i {
+          margin: 0 10px 0 0;
+          color: $color-purple_light
+        }
+      }
+    }
+
+    h1 {
+      font-size: 24px;
+      margin: 0 0 15px;
+      @include media($large-down) {
+        font-size: 18px;
+      }
+    }
+
+    p {
+      line-height: 1.5em;
+      margin-bottom: 0.5em;
+    }
+
+    p.comment-detail {
+      color: $comment-detail-color;
+      font-size: 0.9em;
+      font-style: italic;
+    }
+  }
+}
+
+
+
+

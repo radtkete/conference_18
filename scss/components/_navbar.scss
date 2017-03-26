@@ -1,0 +1,228 @@
+#sticky.stick {
+  margin-top: 0 !important;
+  position: fixed;
+  top: 0;
+  z-index: 10000;
+}
+
+
+.small-height {
+  height: 55px !important;
+  line-height: 55px !important;
+}
+
+.navigation {
+  width: 100%;
+  height: 75px;
+  position: relative;
+  top: 0;
+  left: 0;
+  text-align: left;
+  background-color: rgba(10, 10, 10, 0.95);
+  z-index: 1030;
+
+  // Mobile view
+  .navigation-menu-button {
+    display: block;
+    float: right;
+    margin: 0;
+    height: 75px;
+    line-height: 75px;
+    width: 75px;
+
+    @include media($medium-screen) {
+      display: none;
+    }
+  }
+
+  // Nav menu
+  .navigation-wrapper {
+    @include clearfix;
+
+    position: relative;
+    margin: 0 2%;
+  }
+
+  .nav-logo-wrap {
+    float: left;
+    margin-right: 20px;
+
+    .logo {
+      display: table-cell;
+      vertical-align: middle;
+      max-width: 118px;
+      height: 75px;
+
+      &:before,
+      &:after {
+        display: none;
+      }
+
+      img {
+        max-height: 100%;
+        height: 40px;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  nav.inner-nav {
+    float: none;
+
+    @include media($medium-screen) {
+      display: inline-block;
+      position: relative;
+      float: right;
+      box-sizing: border-box;
+    }
+  }
+
+  ul.navigation-menu {
+    clear: both;
+    display: none;
+    margin: 0 auto;
+    overflow: visible;
+    padding: 0;
+    width: 100%;
+
+    @include media($medium-screen) {
+      display: block;
+      margin: 0;
+      padding: 0;
+      float: right;
+      margin: auto;
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-align: center;
+      line-height: 1.3;
+    }
+
+
+    &.show {
+      display: block;
+    }
+  }
+
+  // Nav items
+  ul li.nav-link {
+    display: block;
+    text-align: right;
+    width: 100%;
+
+    @include media($medium-screen) {
+      background: transparent;
+      width: auto;
+      float: left;
+      margin: 0 0 0 30px;
+      position: relative;
+      list-style: none;
+      padding: 0;
+
+      &:first-of-type {
+        margin-left: 0;
+      }
+    }
+  }
+
+  li.nav-link a {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.26em;
+    color: #fff;
+
+    &:hover {
+      color: $color-pink;
+    }
+
+    @include media($large-screen) {
+      // JqUery
+      height: 75px;
+      line-height: 75px;
+    }
+  }
+}
+
+.nav-search {
+  overflow: visible;
+  padding-right: 0;
+
+  @include media($large-screen) {
+    position: relative;
+  }
+
+
+  ul.mn-sub {
+    // display: none;
+    margin: 0;
+    padding: 0;
+    padding-left: 0;
+
+    // Temporary
+    display: block;
+
+    @include media($large-screen) {
+      width: 200px;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: $color-pink;
+    }
+
+
+    li.mn-wrap {
+      display: block;
+      width: 100%;
+      padding: 8px;
+      margin: 0;
+    }
+
+    form.search-wrap {
+      position: relative;
+    }
+
+    .search-button {
+      -webkit-appearance: button;
+      background: transparent;
+      border: none;
+      color: $color-purple;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 14px;
+      height: 40px;
+      line-height: 38px;
+      margin: 0;
+      outline: none;
+      overflow: hidden;
+      position: absolute;
+      right: 1px;
+      width: 42px;
+    }
+
+    .search-field {
+      background-color: #fff;
+      background-image: none;
+      border-radius: 0;
+      border: 1px solid $color-purple;
+      box-sizing: border-box;
+      color: #777;
+      display: inline-block;
+      font-family: inherit;
+      font-size: 11px;
+      font-weight: 400;
+      height: 40px !important;
+      letter-spacing: 1px;
+      line-height: 1.42857143;
+      margin: 0;
+      padding-left: 7px;
+      padding-right: 7px;
+      padding: 6px 12px;
+      text-transform: uppercase;
+      vertical-align: middle;
+      width: 100% !important;
+    }
+  }
+}
