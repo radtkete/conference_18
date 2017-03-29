@@ -96,15 +96,15 @@ function init_mobile_nav_toggle() {
         
             if ($(".navigation").hasClass("mobile-on")) {
                 mnThisLi = $(this).parent("li:first");
-                if (mnThisLi.hasClass("more")) {
+                if (mnThisLi.hasClass("js-opened")) {
                     mnThisLi.find(".submenu:first").slideUp(function(){
-                        mnThisLi.removeClass("more");
+                        mnThisLi.removeClass("js-opened");
                         mnThisLi.find(".mn-has-sub").find(".fa:first").removeClass("fa-angle-up").addClass("fa-angle-down");
                     });
                 }
                 else {
                     $(this).find(".fa:first").removeClass("fa-angle-down").addClass("fa-angle-up");
-                    mnThisLi.addClass("more");
+                    mnThisLi.addClass("js-opened");
                     mnThisLi.find(".submenu:first").slideDown();
                 }
                 
@@ -133,7 +133,7 @@ function init_mobile_nav_toggle() {
             
         });
         
-  
+
 
 
 

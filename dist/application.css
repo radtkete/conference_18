@@ -478,6 +478,7 @@ body {
   height: 90px;
   line-height: 90px;
   font-size: 30px;
+  color: white;
 }
 
 @media screen and (min-width: 900px) {
@@ -511,8 +512,7 @@ body {
 @media screen and (max-width: 1199px) {
   .navigation .navigation-wrapper,
   .navigation .navigation-wrapper-top {
-    padding-left: 15px;
-    padding-right: 15px;
+    margin: 0 2%;
   }
 }
 
@@ -530,14 +530,15 @@ body {
 }
 
 .navigation nav {
+  border-top: 1px solid rgba(100, 100, 100, 0.4);
   float: none;
 }
 
 @media screen and (min-width: 900px) {
   .navigation nav {
+    border-top: none;
     float: left;
     text-align: center;
-    line-height: 1.5em;
   }
 }
 
@@ -546,7 +547,6 @@ body {
   display: none;
   margin: 0 auto;
   overflow: visible;
-  padding: 0;
   width: 100%;
 }
 
@@ -568,16 +568,23 @@ body {
 
 @media screen and (min-width: 900px) {
   .navigation ul li.nav-item {
+    text-align: left;
     background: transparent;
     display: inline-block;
     text-decoration: none;
-    margin-right: 30px;
+    margin-right: 1.5em;
   }
 }
 
 .navigation ul li.nav-item a.nav-link {
   display: block;
   color: rgba(255, 255, 255, 0.8);
+  height: 46.1538461538px;
+  line-height: 46.1538461538px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 @media screen and (min-width: 900px) {
@@ -589,7 +596,7 @@ body {
 }
 
 .navigation ul li.nav-item .submenu {
-  display: block;
+  display: none;
   width: 100%;
 }
 
@@ -599,7 +606,7 @@ body {
     top: 100%;
     left: -1em;
     background: rgba(30, 30, 30, 0.97);
-    width: 200px;
+    width: 300px;
   }
 }
 
@@ -617,10 +624,51 @@ body {
 }
 
 .navigation ul li.nav-item .submenu li a {
-  display: block;
+  padding: 0 1.5em;
   width: 100%;
-  height: auto !important;
-  padding: 0 1em;
+  display: block;
+  color: rgba(255, 255, 255, 0.8);
+  height: 46.1538461538px;
+  line-height: 46.1538461538px;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.065);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.mobile-on ul li a {
+  padding: 0 0.75em;
+  position: relative;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.065);
+}
+
+.mobile-on a:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.mobile-on .js-opened > .mn-has-sub > .fa {
+  border-color: rgba(255, 255, 255, 0.4);
+  line-height: 16px;
+}
+
+.mobile-on .mn-has-sub > .fa {
+  display: block;
+  width: 20px;
+  height: 20px;
+  font-size: 14px;
+  line-height: 18px;
+  position: absolute;
+  top: 50%;
+  left: 0.75em;
+  margin-top: -0.75em;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
 }
 
 ul,
