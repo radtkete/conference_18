@@ -22,70 +22,100 @@
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+    <div class="page" id="top" style="background: tan">
 
 
 
 
 
-         <div id="tabs" class="c-tabs no-js">
-        <div class="c-tabs-nav">
-          <a href="#" class="c-tabs-nav__link is-active">
-            <i class="fa fa-home"></i>
-            <span>Home</span>
-          </a>
-          <a href="#" class="c-tabs-nav__link">
-            <i class="fa fa-book"></i>
-            <span>Books</span>
-          </a>
-          <a href="#" class="c-tabs-nav__link">
-            <i class="fa fa-heart"></i>
-            <span>Favourites</span>
-          </a>
-          <a href="#" class="c-tabs-nav__link">
-            <i class="fa fa-calendar"></i>
-            <span>Calendar</span>
-          </a>
-          <a href="#" class="c-tabs-nav__link">
-            <i class="fa fa-cog"></i>
-            <span>Settings</span>
-          </a>
+
+
+      <!-- Header -->
+      <header id="header" class="zavbar">
+        <div class="container">
+          <!-- Navbar Top -->
+          <section class="zavbar__top">
+
+            <div class="zavbar__logo">
+              <a href="#">
+                <img alt="AAPA Conference 2018" src="img/logo_small.svg">
+              </a>
+            </div>
+
+
+            <!-- Hamburger -->
+            <div class="hamburger-menu" id="js-mobile-menu">
+              <i class="fa fa-bars"></i>
+            </div>
+
+
+            <!-- Button -->
+            <div class="zavbar__top--component">
+              <a class="btn navbar_registar-button" href="#">Register</a>
+            </div>
+
+
+            <!-- Address List -->
+            <ul class="zavbar__top--component address-list">
+              <li><i class="fa fa-calendar"></i>May 19 - 23, 2018</li>
+              <li><i class="fa fa-map-marker"></i>New Orleans, LA</li>
+            </ul>
+
+          </section>
+          <!-- END // Navbar Top -->
+
+          <!-- Navbar Top -->
+          <section class="zavbar__bottom">
+            <nav class="inner-navv" role="navigation">
+              <ul id="js-navigation-menu" class="navigation-menu show">
+                <li class="nav-link"><a href="javascript:void(0)">Hotel/City</a></li>
+                <li class="nav-link"><a href="javascript:void(0)">Program</a></li>
+                <li class="nav-link"><a href="javascript:void(0)">CME</a></li>
+
+                <li id="js-navigation-more" class="nav-link more">
+                  <a href="javascript:void(0)">More</a>
+                  <ul class="submenu">
+                    <li><a href="javascript:void(0)">Submenu Item</a></li>
+                    <li><a href="javascript:void(0)">Another Item</a></li>
+                  </ul>
+                </li>
+
+                <li class="nav-link"><a href="javascript:void(0)">Speakers & Moderators</a></li>
+                <li class="nav-link"><a href="javascript:void(0)">Exhibitors & Sponsors</a></li>
+
+                <li class="nav-link">
+                  <a id="nav__search" href="javascript:void(0)">
+                    <i class="fa fa-search"></i> Search
+                  </a>
+                  <ul class="submenu">
+                    <li>
+                      
+                      <div class="nav__search">
+                        <form method="post" class="form">
+                          <div class="search-wrap">
+                            <button class="search-button" type="submit" title="Start Search">
+                              <i class="fa fa-search"></i>
+                            </button>
+                            <input type="text" class="search-field" placeholder="Search...">
+                          </div>
+                        </form>
+                      </div>
+
+                    </li>
+                  </ul>
+                </li>
+
+            </ul>
+            </nav>
+          </section>
+
         </div>
-        <div class="c-tab is-active">
-          <div class="c-tab__content">
-            <h2>Welcome home!</h2>
-            <p>Home ipsum dolor sit amet, consectetur adipisicing elit. Ipsam quo minus voluptate unde tempore eveniet consequuntur in, quod animi libero rem similique pariatur quos, et eum nisi ducimus, architecto voluptatibus!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto aspernatur natus dolorem fuga cumque optio saepe corrupti earum. Ipsam quaerat asperiores similique omnis excepturi temporibus ab eum magnam ipsa, odio.</p>
-          </div>
-        </div>
-        <div class="c-tab">
-          <div class="c-tab__content">
-            <h2>All Books</h2>
-            <p>Books ipsum dolor sit amet, consectetur adipisicing elit. Ipsam quo minus voluptate unde tempore eveniet consequuntur in, quod animi libero rem similique pariatur quos, et eum nisi ducimus, architecto voluptatibus!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto aspernatur natus dolorem fuga cumque optio saepe corrupti earum. Ipsam quaerat asperiores similique omnis excepturi temporibus ab eum magnam ipsa, odio.</p>
-          </div>
-        </div>
-        <div class="c-tab">
-          <div class="c-tab__content">
-            <h2>Your Favourites!</h2>
-            <p>Favourites ipsum dolor sit amet, consectetur adipisicing elit. Ipsam quo minus voluptate unde tempore eveniet consequuntur in, quod animi libero rem similique pariatur quos, et eum nisi ducimus, architecto voluptatibus!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto aspernatur natus dolorem fuga cumque optio saepe corrupti earum. Ipsam quaerat asperiores similique omnis excepturi temporibus ab eum magnam ipsa, odio.</p>
-          </div>
-        </div>
-        <div class="c-tab">
-          <div class="c-tab__content">
-            <h2>Stay Busy</h2>
-            <p>Calendar ipsum dolor sit amet, consectetur adipisicing elit. Ipsam quo minus voluptate unde tempore eveniet consequuntur in, quod animi libero rem similique pariatur quos, et eum nisi ducimus, architecto voluptatibus!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto aspernatur natus dolorem fuga cumque optio saepe corrupti earum. Ipsam quaerat asperiores similique omnis excepturi temporibus ab eum magnam ipsa, odio.</p>
-          </div>
-        </div>
-        <div class="c-tab">
-          <div class="c-tab__content">
-            <h2>Change It Up</h2>
-            <p>Settings ipsum dolor sit amet, consectetur adipisicing elit. Ipsam quo minus voluptate unde tempore eveniet consequuntur in, quod animi libero rem similique pariatur quos, et eum nisi ducimus, architecto voluptatibus!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto aspernatur natus dolorem fuga cumque optio saepe corrupti earum. Ipsam quaerat asperiores similique omnis excepturi temporibus ab eum magnam ipsa, odio.</p>
-          </div>
-        </div>
-      </div>
+      </header>
+      <!-- END // Header -->
+
+
+
+
 
 
 
@@ -94,15 +124,62 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="dist/jquery-1.11.2.min.js"><\/script>')</script>
 
-        <script src="js/plugins.js"></script>
+<script type="text/javascript">
+  
+$(window).resize(function() {
+  var more = document.getElementById("js-navigation-more");
+  if ($(more).length > 0) {
+    var windowWidth = $(window).width();
+    var moreLeftSideToPageLeftSide = $(more).offset().left;
+    var moreLeftSideToPageRightSide = windowWidth - moreLeftSideToPageLeftSide;
 
-        <script>
+    if (moreLeftSideToPageRightSide < 330) {
+      $("#js-navigation-more .submenu .submenu").removeClass("fly-out-right");
+      $("#js-navigation-more .submenu .submenu").addClass("fly-out-left");
+    }
+
+    if (moreLeftSideToPageRightSide > 330) {
+      $("#js-navigation-more .submenu .submenu").removeClass("fly-out-left");
+      $("#js-navigation-more .submenu .submenu").addClass("fly-out-right");
+    }
+  }
+});
+
+$(document).ready(function() {
+  var menuToggle = $("#js-mobile-menu").unbind();
+  $("#js-navigation-menu").removeClass("show");
+
+  menuToggle.on("click", function(e) {
+    e.preventDefault();
+    $("#js-navigation-menu").slideToggle(function(){
+      if($("#js-navigation-menu").is(":hidden")) {
+        $("#js-navigation-menu").removeAttr("style");
+      }
+    });
+  });
+
+$('#nav__search').bind('click', function(e){
+  jQuery(this).parent().find('.submenu').slideToggle('fast'); 
+ // apply the toggle to the ul
+  jQuery(this).parent().toggleClass('is-expanded');
+  e.preventDefault();
+});
+
+}); 
+
+
+</script>
+
+
+<!--         <script src="js/main.js"></script> -->
+
+<!-- <script>
   var myTabs = tabs({
     el: '#tabs',
-    tabNavigationLinks: '.c-tabs-nav__link',
-    tabContentContainers: '.c-tab'
+    tabNavigationLinks: '.tabs--nav__item',
+    tabContentContainers: '.tabs--content'
   });
   myTabs.init();
-</script>
+</script> -->
     </body>
 </html>

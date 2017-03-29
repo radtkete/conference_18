@@ -23,22 +23,6 @@ module.exports = function(grunt) {
         }
     },
 
-    watch: {
-        options: {
-            livereload: true,
-        },
-        js: {
-            files: ['js/**/*.js'],
-            tasks: ['uglify:dev']
-        },
-        css: {
-            files: ['scss/**/*.scss'], // <-- when these files change
-            tasks: ['sass:dev'] // <-- run this task
-        },
-        html: {
-            files: ['*.html']
-        }
-    },
 
     sass: {
       dev: {
@@ -58,13 +42,46 @@ module.exports = function(grunt) {
           'dist/application.css': 'scss/application.scss'
         }
       }
-    }
+    },
+
+
+    postcss: {
+        options: {
+          map: true, // inline sourcemaps
+          processors: [
+            require('pixrem')(), // add fallbacks for rem units
+            require('autoprefixer')({browsers: 'last 2 versions'}) // add vendor prefixes
+          ]
+        },
+        dist: {
+            src: 'dist/*.css',
+        },
+    },
+
+    watch: {
+        options: {
+            livereload: true,
+        },
+        js: {
+            files: ['js/**/*.js'],
+            tasks: ['uglify:dev']
+        },
+        css: {
+            files: ['scss/**/*.scss'], // <-- when these files change
+            tasks: ['sass:dev', 'postcss'] // <-- run this task
+        },
+        html: {
+            files: ['*.html']
+        }
+    },
+    
 
   });
 
     // Load the plugins
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-postcss');
     grunt.loadNpmTasks('grunt-sass');
 
     // Register tasks(s)

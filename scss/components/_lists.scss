@@ -29,109 +29,139 @@ dd {
   }
 }
 
-.tabs-holder {
-  @include outer-container(1000px);
-  border: 1px solid #ccc;
+
+
+
+
+
+
+
+
+
+
+.tabs {
+  border: 1px solid $medium-gray;
   margin-top: 50px;
-}
-
-.tabgroup > div {
-  padding: 30px 60px 30px 30px;
-  display: none;
-  &.active {
-    display: block;
-  }
-
-hr {
-    border-bottom: 1px dashed #ddd;
-    border-left: 0;
-    border-right: 0;
-    border-top: 0;
-    margin: 0 auto 1.5em;
-    width: 75%;
-    text-align: center;
-}
-
-
-  @include media($medium-down) {
-    padding: 30px 20px;
-  }
-}
-
-
-
-
-.schedules-tab-nav {
-  text-align: center;
-  margin: -45px 0 0;
   @include media($xsmall-only) {
-    margin: -35px 0 0;
+    padding: 10px;
   }
 
-  ul {
-    @include clearfix;
-    display: inline-block;
-    border: 1px solid #ccc;
+  &--nav {
+    text-align: center;
+    margin: -45px 0 0;
+    @include media($small-down) {
+      margin: -30px 0 0;
+    }
 
-    li {
-      float: left;
-      border-right: 1px solid #ccc;
+    ul {
+      display: inline-block;
+      border: 1px solid $medium-gray;
+      li {
+        float: left;
+        border-right: 1px solid $medium-gray;
+        @include media($large-down) {
+          min-width: 134px;
+        }       
+        @include media($medium-down) {
+          min-width: 95px;
+        }
+        @include media(max-width 480px) {
+          width: 100%;
+          border-bottom: 1px solid $medium-gray;
+          border-right: 0;
+        }
+        &:last-child {
+          margin: 0;
+          border: 0;
+        }
+      }
+    }
 
-      a.tab-button {
-        position: relative;
-        padding: 15px 30px;
-        font-size: 24px;
-        font-weight: $font-weight--bold;
-        outline: none;
-        color: $color-purple_light;
-        background: $base-background-color;
-        display: block;
+    &__item {
+      @include padding(15px 30px);
+      display: block;
+      font-size: 24px;
+      color: $color-pink;
+      background-color: #fff;
+      text-align: center;
+      position: relative;
+      font-weight: 600;
+      @include media($medium-down) {
+        @include padding(15px);
+        font-size: 18px;
+      }
 
-        &.active {
-          background: $color-purple_light;
-          color: #fff;
+      @include media($medium-down) {
+        @include padding(15px);
+        font-size: 18px;
+      }
 
+      &:hover {
+        background-color: #eee;
+        color: $color-purple;
+      }
+
+      &.is-active {
+        color: #fff;
+        background-color: $color-pink;
+        @include media ($small-up) {
           &:after {
-            @include triangle(24px, $color-purple_light, down);
-            content: '';
+            @include triangle(24px, $color-pink, down);
+            content: "";
             position: absolute;
             left: 50%;
-            top: 100%;
+            bottom: -12px;
             margin-left: -12px;
           }
-
-          span {
-            color: #fff;
-          }
         }
-
-        @include media($medium-down) {
-          font-size: 18px;
-          padding: 15px;
-        }
-
-        @include media($xsmall-only) {
-          padding: 10px 5px;
-        }
-
-
         span {
-          display: block;
-          font-size: 16px;
-          font-weight: $font-weight--regular;
-          color: $color-black;
-          text-transform: uppercase;
+          color: #fff;
+        }
+      }
 
-          @include media($medium-down) {
-            font-size: 12px;
-          }
+      span {
+        text-transform: uppercase;
+        display: block;
+        font-size: 16px;
+        font-weight: 400;
+        color: #444;
+        @include media($medium-down) {
+          font-size: 12px;
         }
       }
     }
   }
+
+
+  &--content {
+    display: none;
+    padding: 30px 60px 30px 30px;
+    @include media($medium-down) {
+      @include padding(30px 20px);
+    }
+    @include media($xsmall-only) {
+      padding: 0;
+    }
+    &.is-active {
+      display: block;
+    }
+  }
+
+  // Tabs no-js fallback
+  &.no-js {
+    .tabs--nav {
+      display: none;
+    }
+    .tabs--content {
+      display: block;
+      margin-bottom: 1.5rem;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  
 }
-
-
 
 
 
